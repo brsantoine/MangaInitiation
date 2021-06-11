@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MangaController;
 use App\Http\Controllers\DessinateurController;
 use App\Http\Controllers\ScenaristeController;
+use App\Http\Controllers\TestFormController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -22,3 +24,6 @@ Route::get('/', function () {
 Route::get('mangas', [MangaController::class, 'index']);
 Route::get('dessinateurs', [DessinateurController::class, 'index']);
 Route::get('scenaristes', [ScenaristeController::class, 'index']);
+
+Route::get('testFormulaire', [TestFormController::class, 'getInfos']);
+Route::post('testFormulaire', [TestFormController::class, 'postInfos']);
